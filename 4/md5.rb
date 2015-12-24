@@ -4,7 +4,7 @@ require 'digest'
 
 def condition(x)
     prefix = 'iwrupvqb'
-    Digest::MD5.hexdigest(prefix + x.to_s).start_with? "00000"
+    Digest::MD5.hexdigest(prefix + x.to_s).start_with? "000000"
 end
 
 puts (1..Float::INFINITY)
