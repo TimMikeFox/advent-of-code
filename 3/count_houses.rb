@@ -2,11 +2,11 @@
 require 'set'
 
 count = 1
-location = [0,0]
+locations = [[0,0],[0,0]]
 visited_locations = Set.new
-visited_locations << location
+visited_locations << [0,0]
 STDIN.each_char do |c|
-    x, y = location
+    x, y = locations.shift
     case c
     when '<'
         x -= 1
@@ -17,7 +17,7 @@ STDIN.each_char do |c|
     when 'v'
         y -= 1
     end
-    location = [x,y]
-    visited_locations << location
+    locations << [x,y]
+    visited_locations << [x,y]
 end
 puts visited_locations.count
