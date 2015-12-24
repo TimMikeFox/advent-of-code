@@ -41,5 +41,12 @@ def has_double_letter?(str)
         .count >= 1
 end
 
-print has_double_letter?("abcdefg"), "\n"
-print has_double_letter?("aabbccdd"), "\n"
+def has_illegal_substring?(str)
+    %w(ab cd pq xy)
+        .each
+        .select { |x| str.include? x }
+        .any?
+end
+
+print has_illegal_substring?("fdfdsafdsaabfdsafdsa"), "\n"
+print has_illegal_substring?("fdsafdsafdsafdsafdsa"), "\n"
