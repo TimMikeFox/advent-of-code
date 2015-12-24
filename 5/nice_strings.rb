@@ -29,7 +29,6 @@
 def three_vowels?(str)
     str.each_char
        .select { |c| ['a','e','i','o','u'].include? c }
-       .group_by { |c| c }
        .count >= 3
 end
 
