@@ -47,5 +47,13 @@ def has_illegal_substring?(str)
         .any?
 end
 
-print has_illegal_substring?("fdfdsafdsaabfdsafdsa"), "\n"
-print has_illegal_substring?("fdsafdsafdsafdsafdsa"), "\n"
+c = %w(ugknbfddgicrmopn aaa jchzalrnumimnmhp haegwjzuvuyypxyu dvszwmarrgswjxmb)
+.each
+.select do |w|
+    three_vowels?(w) &&
+        has_double_letter?(w) &&
+        ! has_illegal_substring?(w)
+end
+.count
+
+print c
