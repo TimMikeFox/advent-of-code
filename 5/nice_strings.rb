@@ -33,5 +33,13 @@ def three_vowels?(str)
        .count >= 3
 end
 
-print three_vowels?("aeiaeiaeiaei"), "\n"
-print three_vowels?("aeaeaeaeae"  ), "\n"
+def has_double_letter?(str)
+    "abcdefghijklmnopqrstuvwxyz"
+        .each_char
+        .map { |c| c * 2 }
+        .select { |x| str.include? x }
+        .count >= 1
+end
+
+print has_double_letter?("abcdefg"), "\n"
+print has_double_letter?("aabbccdd"), "\n"
