@@ -25,3 +25,13 @@
 # haegwjzuvuyypxyu is naughty because it contains the string xy.
 # 
 # dvszwmarrgswjxmb is naughty because it contains only one vowel.
+
+def three_vowels?(str)
+    str.each_char
+       .select { |c| ['a','e','i','o','u'].include? c }
+       .group_by { |c| c }
+       .count >= 3
+end
+
+print three_vowels?("aeiaeiaeiaei"), "\n"
+print three_vowels?("aeaeaeaeae"  ), "\n"
