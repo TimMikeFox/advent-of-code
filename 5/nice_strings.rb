@@ -47,13 +47,12 @@ def has_illegal_substring?(str)
         .any?
 end
 
-c = %w(ugknbfddgicrmopn aaa jchzalrnumimnmhp haegwjzuvuyypxyu dvszwmarrgswjxmb)
-.each
+count = STDIN.each
 .select do |w|
-    three_vowels?(w) &&
-        has_double_letter?(w) &&
-        ! has_illegal_substring?(w)
+   three_vowels?(w) &&
+       has_double_letter?(w) &&
+       ! has_illegal_substring?(w)
 end
-.count
+.count 
 
-print c
+print count
